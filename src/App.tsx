@@ -1,18 +1,11 @@
 import './App.css'
-import { generateClient } from 'aws-amplify/api'
-import type {Schema} from '../amplify/data/resource'
+import Auth1 from './Auth1'
 
-const client = generateClient<Schema>()
-
-async function sayHello(){
-  const result = await client.queries.sayHello({name:'World'})
-  console.log(result)
-}
 
 function App() {
     return (
     <>
-      <button onClick={sayHello}>Say Hello</button>
+      <Auth1 />
     </>
   )
 }
